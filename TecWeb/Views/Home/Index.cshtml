@@ -1,0 +1,14 @@
+﻿@model List<TecWeb.ControlAsistencia.Participante>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Prueba de Sistema</h2>
+<div class="separator"></div>
+
+<p>
+    En la lista a continuación puedes seleccionar un usuario con el cual probar el sistema.
+</p>
+
+@Html.Partial("_ListaProfesores",Model)
+

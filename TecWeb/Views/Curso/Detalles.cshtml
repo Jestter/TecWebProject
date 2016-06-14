@@ -1,0 +1,97 @@
+﻿@model TecWeb.ControlAsistencia.Curso
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h1>
+    <a class="glyphicon glyphicon-circle-arrow-left back-btn" aria-hidden="true" href=@Url.Action("Index","Usuario")></a>
+</h1>
+<h2>
+    Detalles de Curso
+</h2>
+<div class="separator"></div>
+
+<div>
+    <h3>@Model.Nombre</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Creditos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Creditos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URL)
+        </dd>
+
+        <dt>
+            Profesores
+        </dt>
+
+        <dd>
+            @Html.Partial("_ParticipantesCurso", Model.Profesores)
+        </dd>
+
+        @if (Model.Ayudantes.Length > 0)
+        {
+        <dt>
+            Ayudantes
+        </dt>
+
+        <dd>
+            @Html.Partial("_ParticipantesCurso", Model.Ayudantes)
+        </dd>
+        }
+
+        <dt>
+            Alumnos
+        </dt>
+
+        <dd>
+            @Html.Partial("_ParticipantesCurso", Model.Alumnos)
+        </dd>
+
+        <dt>
+            Clases
+        </dt>
+
+        <dd>
+            @Html.Partial("_ClasesCurso", Model.Horario)
+        </dd>
+
+
+    </dl>
+</div>
+

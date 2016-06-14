@@ -1,0 +1,77 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    background-color: #fff;
+    font-size: 13px;
+    line-height: 24px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+    body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+        text-rendering: optimizelegibility;
+        font-family: Lato,sans-serif;
+        color: #3a3a3a;
+        font-weight: 700;
+    }
+
+.separator {
+    height: 1px;
+    background-color: #2e8def;
+    margin-bottom: 20px;
+    width: 30px;
+}
+
+    .separator.small {
+        width: 20px;
+    }
+
+    .separator.medium {
+        width: 30px;
+    }
+
+    .separator.large {
+        width: 50px;
+    }
+
+    .separator.full {
+        width: 100%;
+    }
+
+    .separator.center {
+        margin: 0 auto;
+    }
+
+.heading .separator {
+    margin-bottom: 10px;
+}
+
+::selection {
+    background-color: #2e8def;
+    color: #fff;
+}
+
+.back-btn {
+    color : black;
+}
+
+    .back-btn:hover {
+        text-decoration : none;
+    }
