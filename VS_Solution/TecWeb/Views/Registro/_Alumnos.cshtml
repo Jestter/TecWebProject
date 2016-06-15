@@ -1,0 +1,31 @@
+﻿@model TecWeb.ControlAsistencia.Clase
+
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Asistencia
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in TecWeb.Util.Curso.alumnos) {
+    <tr>
+        <td>
+            @item.Nombre
+        </td>
+        <td>
+            <input type="checkbox" onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha)">
+        </td>
+    </tr>
+}
+
+</table>
+
+<script>
+
+
+
+</script>

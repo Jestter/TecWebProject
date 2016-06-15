@@ -38,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.Titulo)
         </td>
         <td style="text-align:center;vertical-align:middle">
-            <a class='btn btn-default' href='#'>Registrar</a>
+            <a class='btn btn-default' href='@Url.Action("Index","Registro",item)'>Registrar</a>
         </td>
 
     </tr>

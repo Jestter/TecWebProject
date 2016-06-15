@@ -1,0 +1,26 @@
+﻿@model TecWeb.ControlAsistencia.Clase
+
+<h2>Registro Asistencia</h2>
+<div class="separator"></div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Curso
+        </dt>
+
+        <dd>
+            @TecWeb.Util.Curso.Nombre
+        </dd>
+        <dt>
+            Fecha
+        </dt>
+
+        <dd>
+            @Model.Fecha.ToString("dd/MM/yyyy HH:mm")
+        </dd>
+    </dl>
+</div>
+
+@Html.Partial("_Alumnos",Model)
