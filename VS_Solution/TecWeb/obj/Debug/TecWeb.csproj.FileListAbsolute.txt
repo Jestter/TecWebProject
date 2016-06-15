@@ -80,3 +80,44 @@ C:\Users\Jestter\Desktop\TecWeb\VS_Projects\WebTecProject\VS_Solution\TecWeb\bin
 C:\Users\Jestter\Desktop\TecWeb\VS_Projects\WebTecProject\VS_Solution\TecWeb\obj\Debug\TecWeb.csprojResolveAssemblyReference.cache
 C:\Users\Jestter\Desktop\TecWeb\VS_Projects\WebTecProject\VS_Solution\TecWeb\obj\Debug\TecWeb.dll
 C:\Users\Jestter\Desktop\TecWeb\VS_Projects\WebTecProject\VS_Solution\TecWeb\obj\Debug\TecWeb.pdb
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\csc.exe
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\vbc.exe
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\TecWeb.dll.config
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\TecWeb.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\TecWeb.pdb
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\Newtonsoft.Json.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Helpers.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Http.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Mvc.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Razor.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Webpages.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Razor.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Webpages.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Helpers.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Mvc.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\Newtonsoft.Json.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Http.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\obj\Debug\TecWeb.csprojResolveAssemblyReference.cache
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\obj\Debug\TecWeb.dll
+C:\Users\Fernando\Desktop\2016-01\TECNOLOGIAS WEB\TecWebProject\VS_Solution\TecWeb\obj\Debug\TecWeb.pdb

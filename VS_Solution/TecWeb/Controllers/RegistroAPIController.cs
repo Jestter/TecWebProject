@@ -22,9 +22,11 @@ namespace TecWeb.Controllers
         }
 
         // POST: api/RegistroAPI
-        public void Post(long idPar,long idCur,long fecha)
+        public void Post([FromBody]string value)//long idPar,long idCur,long fecha)
         {
-            new ControlAsistencia.ControlAsistenciaClient().RegistrarAsistencia(idPar,idCur,fecha);
+            Console.WriteLine(value);
+            Console.WriteLine(value);
+            //new ControlAsistencia.ControlAsistenciaClient().RegistrarAsistencia(idPar,idCur,fecha);
         }
 
         // PUT: api/RegistroAPI/5

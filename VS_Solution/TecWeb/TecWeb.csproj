@@ -153,6 +153,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegistroController.cs" />
     <Compile Include="Controllers\RegistroAPIController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -164,6 +165,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Util\Curso.cs" />
     <Compile Include="Util\Sesion.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +175,8 @@
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Curso\Index.cshtml" />
     <Content Include="Views\Shared\_ListaCursos.cshtml" />
+    <Content Include="Views\Registro\Index.cshtml" />
+    <Content Include="Views\Registro\_Alumnos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
