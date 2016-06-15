@@ -170,6 +170,8 @@
     <Content Include="packages.config" />
     <None Include="Service References\ControlAsistencia\ControlAsistencia.wsdl" />
     <Content Include="Views\Usuario\Login.cshtml" />
+    <Content Include="Views\Curso\Index.cshtml" />
+    <Content Include="Views\Shared\_ListaCursos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

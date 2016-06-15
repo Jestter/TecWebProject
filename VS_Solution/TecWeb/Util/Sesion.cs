@@ -7,18 +7,19 @@ namespace TecWeb.Util
 {
     public class Sesion
     {
-        static public long UserID { get; set; }
+        static private long userID = -1;
+        static public long UserID { get { return userID; } set { userID = value; } }
         static public string UserName { get; set; }
 
         static public void Logout()
         {
-            UserID = -1;
+            userID = -1;
             UserName = "Unknown";
         }
 
         static public bool Authenticated()
         {
-            return UserID != -1;
+            return userID != -1;
         }
     }
 }

@@ -8,6 +8,12 @@ namespace TecWeb.Controllers
 {
     public class CursoController : Controller
     {
+        public ActionResult Index()
+        {
+            var serv = new ControlAsistencia.ControlAsistenciaClient();
+            var Cursos = serv.Cursos();
+            return View(Cursos);
+        }
 
         public ActionResult Detalles(long id)
         {

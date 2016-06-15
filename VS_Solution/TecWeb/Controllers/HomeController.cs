@@ -21,7 +21,7 @@ namespace TecWeb.Controllers
                         Profesores.Add(Profs);
                     }
             Profesores.Sort((p1,p2) => p1.Nombre.CompareTo(p2.Nombre));
-            Util.Sesion.Logout();
+            //Util.Sesion.Logout();
             return View(Profesores);
         }
     }

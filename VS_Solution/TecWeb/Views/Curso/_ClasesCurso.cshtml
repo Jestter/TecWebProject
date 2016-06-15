@@ -28,6 +28,8 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Fecha)
+            @if (DateTime.Today.DayOfYear == item.Fecha.DayOfYear)
+            {<p style="font-size:12pt;color:lime;font-weight:bold"> Hoy </p> }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Tipo)

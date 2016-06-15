@@ -5,7 +5,7 @@
 }
 
 <h1>
-    <a class="glyphicon glyphicon-circle-arrow-left back-btn" aria-hidden="true" href=@Url.Action("Index","Usuario")></a>
+    <a class="glyphicon glyphicon-circle-arrow-left back-btn" aria-hidden="true" href=@Url.Action("Index", "Usuario")></a>
 </h1>
 <h2>
     Detalles de Curso
@@ -83,14 +83,16 @@
             @Html.Partial("_ParticipantesCurso", Model.Alumnos)
         </dd>
 
-        <dt>
-            Clases
-        </dt>
+        @if(Model.Profesores.Any(p => p.ID == TecWeb.Util.Sesion.UserID))
+        {
+            <dt>
+                Clases
+            </dt>
 
-        <dd>
-            @Html.Partial("_ClasesCurso", Model.Horario)
-        </dd>
-
+            <dd>
+                @Html.Partial("_ClasesCurso", Model.Horario)
+            </dd>
+        }
 
     </dl>
 </div>
