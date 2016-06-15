@@ -2,13 +2,13 @@
 
 <table class="table">
     <tr>
-        <th>
+        <th style="text-align:center">
             @Html.DisplayNameFor(model => model.ID)
         </th>
-        <th>
+        <th style="text-align:center">
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
-        <th>
+        <th style="text-align:center">
             @Html.DisplayNameFor(model => model.Seccion)
         </th>
         <th></th>
@@ -17,17 +17,17 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
+            <td style="text-align:center;vertical-align:middle">
                 @Html.DisplayFor(modelItem => item.ID)
             </td>
-            <td>
+            <td style="text-align:center;vertical-align:middle">
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
-            <td>
+            <td style="text-align:center;vertical-align:middle">
                 @Html.DisplayFor(modelItem => item.Seccion)
             </td>
-            <td>
-                @Html.ActionLink("Detalles", "Detalles", "Curso", new { id = item.ID }, null)
+            <td style="text-align:center;vertical-align:middle">
+                <a class="btn btn-default" href='@Url.Action("Detalles", "Curso", new { id = item.ID })'>Detalles</a>
             </td>
         </tr>
     }

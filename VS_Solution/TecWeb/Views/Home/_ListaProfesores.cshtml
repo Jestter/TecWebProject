@@ -5,16 +5,18 @@
         <th>
             Profesor
         </th>
-        <th></th>
+        <th>
+            Acceso
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
-        <td>
-            @Html.ActionLink("Iniciar Prueba","Login","Usuario", new { id=item.ID , nombre=item.Nombre},null)
+        <td style="vertical-align:middle">
+            <a class="btn btn-default" href='@Url.Action("Login","Usuario", new { id=item.ID , nombre=item.Nombre})'>Iniciar Prueba</a>
         </td>
     </tr>
 }
