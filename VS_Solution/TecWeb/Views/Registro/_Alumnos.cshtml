@@ -17,7 +17,15 @@
             @item.Nombre
         </td>
         <td>
-            <input type="checkbox" onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha)">
+            @if (Model.Presentes != null && Model.Presentes.Length >0 && Model.Presentes.Any(p => p.ID == item.ID))
+            {
+                <input type="checkbox" checked onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha.ToString("yyyyMMddHHmm"))">
+            }
+            else
+            {
+            <input type="checkbox" onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha.ToString("yyyyMMddHHmm"))">
+            }
+            
         </td>
     </tr>
 }
@@ -25,6 +33,22 @@
 </table>
 
 <script>
+
+    registrar=function(idPar,idCur,fecha){
+        var parametros = {
+            "idPar" : idPar,
+            "idCur" : idCur,
+            "fecha" : fecha
+        };
+       
+        $.ajax({
+            data: JSON.stringify(parametros),
+            url:   '/api/RegistroAPI',
+            type: 'post',
+            contentType:"application/json",                       
+           
+        });   
+    }
 
 
 
