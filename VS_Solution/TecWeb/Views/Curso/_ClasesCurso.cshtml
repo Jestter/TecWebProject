@@ -1,42 +1,44 @@
-﻿@model IEnumerable<TecWeb.ControlAsistencia.Clase>
+﻿@model TecWeb.ControlAsistencia.Curso
 
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
+        <th style="text-align:center">
+            Descripción
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fecha)
+        <th style="text-align:center">
+            Fecha
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo)
+        <th style="text-align:center">
+            Tipo
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Titulo)
+        <th style="text-align:center">
+            Título
         </th>
-        <th>
+        <th style="text-align:center">
             Asistencia
         </th>
 
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.Horario) {
     <tr>
-        <td>
+        <td style="text-align:center;vertical-align:middle">
             @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
-        <td>
+        <td style="text-align:center;vertical-align:middle">
             @Html.DisplayFor(modelItem => item.Fecha)
+            @if (DateTime.Today.DayOfYear == item.Fecha.DayOfYear)
+            {<p style="font-size:12pt;color:lime;font-weight:bold"> Hoy </p> }
         </td>
-        <td>
+        <td style="text-align:center;vertical-align:middle">
             @Html.DisplayFor(modelItem => item.Tipo)
         </td>
-        <td>
+        <td style="text-align:center;vertical-align:middle">
             @Html.DisplayFor(modelItem => item.Titulo)
         </td>
-        <td>
-            @Html.ActionLink("Registrar", null)
+        <td style="text-align:center;vertical-align:middle">
+            <a class='btn btn-default' href='#'>Registrar</a>
         </td>
 
     </tr>

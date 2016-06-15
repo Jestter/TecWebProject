@@ -16,6 +16,12 @@ namespace TecWeb.Controllers
             return RedirectToAction("Index", "Usuario");
         }
 
+        public ActionResult Logout()
+        {
+            Util.Sesion.Logout();
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult Index()
         {
             if(!Util.Sesion.Authenticated())
