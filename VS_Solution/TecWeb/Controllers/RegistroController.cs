@@ -9,8 +9,9 @@ namespace TecWeb.Controllers
     public class RegistroController : Controller
     {
         // GET: Registro
-        public ActionResult Index(ControlAsistencia.Clase clase)
+        public ActionResult Index(long id)
         {
+            var clase = new ControlAsistencia.ControlAsistenciaClient().Curso(Util.Curso.ID).Horario[id];
             return View(clase);
         }
     }
