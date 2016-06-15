@@ -17,10 +17,6 @@ namespace TecWeb.Controllers
 
         public ActionResult Detalles(long id)
         {
-            if (!Util.Sesion.Authenticated())
-            {
-                return RedirectToAction("Index", "Home");
-            }
             var serv = new ControlAsistencia.ControlAsistenciaClient();
             var Curso = serv.Curso(id);
             return View(Curso);
