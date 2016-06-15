@@ -16,16 +16,19 @@ namespace TecWeb.Controllers
         }
 
         // GET: api/RegistroAPI/5
-        public string Get(int id)
+        [Route("api/RegistroAPI/{idPar}/{idCur}/{fecha}")]
+        public string Get(long idPar, long idCur, long fecha)
         {
+            Console.WriteLine(idPar);
             return "value";
         }
 
         // POST: api/RegistroAPI
-        public void Post([FromBody]string value)//long idPar,long idCur,long fecha)
+        [Route("api/RegistroAPI/{idPar}/{idCur}/{fecha}")]
+        public void Post(long idPar,long idCur,long fecha)
         {
-            Console.WriteLine(value);
-            Console.WriteLine(value);
+            Console.WriteLine(idPar);
+           
             //new ControlAsistencia.ControlAsistenciaClient().RegistrarAsistencia(idPar,idCur,fecha);
         }
 

@@ -35,17 +35,15 @@
 <script>
 
     registrar=function(idPar,idCur,fecha){
-        var parametros = {
-            "idPar" : idPar,
-            "idCur" : idCur,
-            "fecha" : fecha
-        };
-       
         $.ajax({
-            data: JSON.stringify(parametros),
+            data: JSON.stringify({
+                "idPar" : "idPar",
+                "idCur" : "idCur",
+                "fecha" : "fecha"              
+            }),
             url:   '/api/RegistroAPI',
-            type: 'post',
-            contentType:"application/json",                       
+            type: 'get',
+            contentType:"application/json"                      
            
         });   
     }

@@ -10,6 +10,7 @@ namespace TecWeb.Util
         public static long ID { get; set; }
         public static string Nombre { get; set; }
         public static ControlAsistencia.Participante[] alumnos { get; set; }
+        
 
 
     }
