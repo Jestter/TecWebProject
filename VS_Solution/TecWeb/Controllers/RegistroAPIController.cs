@@ -9,6 +9,14 @@ namespace TecWeb.Controllers
 {
     public class RegistroAPIController : ApiController
     {
+
+        public class PostData
+        {
+            public long IdPar { get; set; }
+            public long IdCur { get; set; }
+            public long Fecha { get; set; }
+        }
+
         // GET: api/RegistroAPI
         public IEnumerable<string> Get()
         {
@@ -16,20 +24,15 @@ namespace TecWeb.Controllers
         }
 
         // GET: api/RegistroAPI/5
-        [Route("api/RegistroAPI/{idPar}/{idCur}/{fecha}")]
-        public string Get(long idPar, long idCur, long fecha)
+        public string Get([FromBody]string value)
         {
-            Console.WriteLine(idPar);
             return "value";
         }
 
         // POST: api/RegistroAPI
-        [Route("api/RegistroAPI/{idPar}/{idCur}/{fecha}")]
-        public void Post(long idPar,long idCur,long fecha)
+        public void Post([FromBody]PostData data)
         {
-            Console.WriteLine(idPar);
-           
-            //new ControlAsistencia.ControlAsistenciaClient().RegistrarAsistencia(idPar,idCur,fecha);
+            new ControlAsistencia.ControlAsistenciaClient().RegistrarAsistencia(data.IdPar, data.IdCur, data.Fecha);
         }
 
         // PUT: api/RegistroAPI/5

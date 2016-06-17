@@ -19,7 +19,14 @@
         <dd>
             @Model.Fecha.ToString("dd/MM/yyyy HH:mm")
         </dd>
+
+        <dt>
+            Lista de Alumnos
+        </dt>
+
+        <dd>
+            @Html.Partial("_Alumnos", Model)
+        </dd>
+
     </dl>
 </div>
-
-@Html.Partial("_Alumnos",Model)

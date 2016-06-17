@@ -37,12 +37,12 @@
     registrar=function(idPar,idCur,fecha){
         $.ajax({
             data: JSON.stringify({
-                "idPar" : "idPar",
-                "idCur" : "idCur",
-                "fecha" : "fecha"              
+                "IdPar" : idPar,
+                "IdCur" : idCur,
+                "Fecha" : fecha              
             }),
             url:   '/api/RegistroAPI',
-            type: 'get',
+            type: 'POST',
             contentType:"application/json"                      
            
         });   
