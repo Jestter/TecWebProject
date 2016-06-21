@@ -1,36 +1,43 @@
 ﻿@model TecWeb.ControlAsistencia.Clase
 
-<table class="table">
-    <tr>
-        <th>
-            Nombre
-        </th>
-        <th>
-            Asistencia
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in TecWeb.Util.Curso.alumnos) {
-    <tr>
-        <td>
-            @item.Nombre
-        </td>
-        <td>
-            @if (Model.Presentes != null && Model.Presentes.Length >0 && Model.Presentes.Any(p => p.ID == item.ID))
-            {
-                <input type="checkbox" checked onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha.ToString("yyyyMMddHHmm"))">
-            }
-            else
-            {
-            <input type="checkbox" onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha.ToString("yyyyMMddHHmm"))">
-            }
-            
-        </td>
-    </tr>
-}
+<div class="row">
+    <div class="col-md-8">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th style="vertical-align:middle">
+                    Nombre
+                </th>
+                <th style="text-align:center;vertical-align:middle">
+                    Asistencia
+                </th>
 
-</table>
+            </tr>
+
+            @foreach (var item in TecWeb.Util.Curso.alumnos)
+            {
+                <tr>
+                    <td style="vertical-align:middle">
+                        @item.Nombre
+                    </td>
+                    <td style="text-align:center;vertical-align:middle">
+                        @if (Model.Presentes != null && Model.Presentes.Length > 0 && Model.Presentes.Any(p => p.ID == item.ID))
+                        {
+                            <input type="checkbox" checked onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha.ToString("yyyyMMddHHmm"))">
+                        }
+                        else
+                        {
+                            <input type="checkbox" onchange="registrar(@item.ID,@TecWeb.Util.Curso.ID,@Model.Fecha.ToString("yyyyMMddHHmm"))">
+                        }
+
+                    </td>
+                </tr>
+            }
+
+
+        </table>
+    </div>
+</div>
 
 <script>
 

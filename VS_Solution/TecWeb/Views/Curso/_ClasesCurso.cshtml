@@ -1,47 +1,47 @@
 ﻿@model TecWeb.ControlAsistencia.Curso
 
-<table class="table">
-    <tr>
-        <th style="text-align:center">
-            Descripción
-        </th>
-        <th style="text-align:center">
-            Fecha
-        </th>
-        <th style="text-align:center">
-            Tipo
-        </th>
-        <th style="text-align:center">
-            Título
-        </th>
-        <th style="text-align:center">
-            Asistencia
-        </th>
 
-        <th></th>
-    </tr>
 
-@for (int i = 0; i < Model.Horario.Length; i++) {
-    <tr>
-        <td style="text-align:center;vertical-align:middle">
-            @Html.DisplayFor(modelItem => Model.Horario[i].Descripcion)
-        </td>
-        <td style="text-align:center;vertical-align:middle">
-            @Html.DisplayFor(modelItem => Model.Horario[i].Fecha)
-            @if (DateTime.Today.DayOfYear == Model.Horario[i].Fecha.DayOfYear)
-            {<p style="font-size:12pt;color:lime;font-weight:bold"> Hoy </p> }
-        </td>
-        <td style="text-align:center;vertical-align:middle">
-            @Html.DisplayFor(modelItem => Model.Horario[i].Tipo)
-        </td>
-        <td style="text-align:center;vertical-align:middle">
-            @Html.DisplayFor(modelItem => Model.Horario[i].Titulo)
-        </td>
-        <td style="text-align:center;vertical-align:middle">
-            <a class='btn btn-default' href='@Url.Action("Index","Registro",new { id = i})'>Registrar</a>
-        </td>
+    <table class="table table-bordered table-striped ">
+        <tr>
+            <th style="text-align:center">
+                Descripción
+            </th>
+            <th style="text-align:center">
+                Fecha
+            </th>
+            <th style="text-align:center">
+                Tipo
+            </th>
+            <th style="text-align:center">
+                Título
+            </th>
+            <th style="text-align:center">
+                Asistencia
+            </th>           
+        </tr>
 
-    </tr>
-}
+        @for (int i = 0; i < Model.Horario.Length; i++)
+        {
+            <tr>
+                <td style="text-align:center;vertical-align:middle">
+                    @Html.DisplayFor(modelItem => Model.Horario[i].Descripcion)
+                </td>
+                <td style="text-align:center;vertical-align:middle">
+                    @Html.DisplayFor(modelItem => Model.Horario[i].Fecha)
+                    @if (DateTime.Today.DayOfYear == Model.Horario[i].Fecha.DayOfYear)
+                    {<p style="font-size:12pt;color:lime;font-weight:bold"> Hoy </p> }
+                </td>
+                <td style="text-align:center;vertical-align:middle">
+                    @Html.DisplayFor(modelItem => Model.Horario[i].Tipo)
+                </td>
+                <td style="text-align:center;vertical-align:middle">
+                    @Html.DisplayFor(modelItem => Model.Horario[i].Titulo)
+                </td>
+                <td style="text-align:center;vertical-align:middle">
+                    <a class='btn btn-primary' href='@Url.Action("Index","Registro",new { id = i})'>Registrar</a>
+                </td>
+            </tr>
+        }
 
-</table>
+    </table>
