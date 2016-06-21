@@ -1,24 +1,64 @@
 ﻿@model IEnumerable<TecWeb.ControlAsistencia.Participante>
 
-<table class="table">
-    <tr>
-        <th>
-            Profesor
-        </th>
-        <th>
-            Acceso
-        </th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td style="vertical-align:middle">
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td style="vertical-align:middle">
-            <a class="btn btn-default" href='@Url.Action("Login","Usuario", new { id=item.ID , nombre=item.Nombre})'>Iniciar Prueba</a>
-        </td>
-    </tr>
-}
 
-</table>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Ingresar </h3>
+            </div>
+            <div class="panel-body">
+                <form action="/Usuario/Login/1?nombre=hola" class="form-signin" data-abide="true" method="post">
+                    <div class="form-group">
+                        <label for="Email">Correo Electrónico</label>
+                        <input id="Email" name="Email" class="form-control" placeholder="Su correo electrónico" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Contraseña</label>
+                        <input id="Password" name="Password" class="form-control" placeholder="Su contraseña" required="" type="password">
+                        <a class="pull-right small" href="#">Olvidó su contraseña?</a>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Recuérdame
+                        </label>
+                    </div>
+                    <div class="padd-t-20">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="panel-footer">Aún no tienes cuenta?  <a href="#" data-toggle="modal" data-target="#RegistroModal"> Regístrate</a> aquí!</div>
+        </div>
+    </div>
+</div>
+
+    <!--<div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <table class="table table-bordered table-striped ">
+                <tr>
+                    <th>
+                        Profesor
+                    </th>
+                    <th style="text-align:center">
+                        Acceso
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td style="vertical-align:middle">
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td style="vertical-align:middle;text-align:center">
+                            <a class="btn btn-primary" href='@Url.Action("Login","Usuario", new { id=item.ID , nombre=item.Nombre})'>Iniciar Prueba</a>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+        -->
