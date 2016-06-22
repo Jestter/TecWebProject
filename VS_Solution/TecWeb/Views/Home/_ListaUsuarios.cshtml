@@ -5,7 +5,7 @@
             <table class="table table-bordered table-striped ">
                 <tr>
                     <th>
-                        Profesor
+                        Usuario
                     </th>
                     <th style="text-align:center">
                         Acceso
@@ -19,7 +19,7 @@
                             @Html.DisplayFor(modelItem => item.Nombre)
                         </td>
                         <td style="vertical-align:middle;text-align:center">
-                            <a class="btn btn-primary" href='@Url.Action("Login","Usuario", new { id=item.ID , nombre=item.Nombre})'>Iniciar Prueba</a>
+                            <a class="btn btn-primary" href='@Url.Action("Login", "Usuario", new { id = item.ID, nombre = item.Nombre })'>Iniciar Prueba</a>
                         </td>
                     </tr>
                 }

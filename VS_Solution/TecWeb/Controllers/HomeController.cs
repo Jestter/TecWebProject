@@ -11,18 +11,28 @@ namespace TecWeb.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            List<ControlAsistencia.Participante> Profesores = new List<ControlAsistencia.Participante>();
+            List<ControlAsistencia.Participante> Usuarios = new List<ControlAsistencia.Participante>();
 
             var Cursos = new ControlAsistencia.ControlAsistenciaClient().Cursos();
             foreach (var Cur in Cursos)
                 foreach(var Profs in Cur.Profesores)
-                    if (!Profesores.Any(P => P.Nombre.Equals(Profs.Nombre)))
+                    if (!Usuarios.Any(P => P.Nombre.Equals(Profs.Nombre)))
                     {
-                        Profesores.Add(Profs);
+                        Usuarios.Add(Profs);
                     }
-            Profesores.Sort((p1,p2) => p1.Nombre.CompareTo(p2.Nombre));
+            Usuarios.Sort((p1,p2) => p1.Nombre.CompareTo(p2.Nombre));
+
+            List<ControlAsistencia.Participante> Alumnos = new List<ControlAsistencia.Participante>();
+            foreach (var Cur in Cursos)
+                foreach (var alum in Cur.Alumnos)
+                    if (!Alumnos.Any(P => P.Nombre.Equals(alum.Nombre)))
+                    {
+                        Alumnos.Add(alum);
+                    }
+            Alumnos.Sort((p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
             //Util.Sesion.Logout();
-            return View(Profesores);
+            Usuarios.AddRange(Alumnos);
+            return View(Usuarios);
         }
     }
 }

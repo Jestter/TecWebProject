@@ -28,8 +28,11 @@ namespace TecWeb.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            var Cursos = new ControlAsistencia.ControlAsistenciaClient().CursosPorProfesor(Util.Sesion.UserID);
-            return View(Cursos);
+            //var Cursos = new ControlAsistencia.ControlAsistenciaClient().CursosPorProfesor(Util.Sesion.UserID);
+
+            var Cursos = new ControlAsistencia.ControlAsistenciaClient().Cursos();
+            
+            return View(Cursos.Where(C => C.Profesores.Any(p => (p.ID == Util.Sesion.UserID) || C.Alumnos.Any(a => a.ID == Util.Sesion.UserID))));
         }
     }
 }
