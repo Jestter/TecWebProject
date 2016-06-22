@@ -26,11 +26,11 @@
                 @Html.ActionLink("Proyecto Tecnologías Web", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">   
-              <!--  <ul class="nav navbar-nav">
-                    <li style="font-weight: normal">@Html.ActionLink("Cursos","Index","Curso")</li>
-                </ul>-->
                 @if (TecWeb.Util.Sesion.Authenticated())
                 {
+                    <ul class="nav navbar-nav">
+                        <li style="font-weight: normal">@Html.ActionLink("Cursos", "Index", "Curso")</li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -49,9 +49,9 @@
                                             </div>
                                             <div class="col-lg-8">
                                                 <p class="text-left"><strong>@TecWeb.Util.Sesion.UserName</strong></p>
-                                                <p class="text-left">
+                                                <!--p class="text-left">
                                                     <a href="@Url.Action("Index","Usuario")" class="btn btn-primary btn-block btn-sm">Mis Cursos</a>
-                                                </p>
+                                                </p-->
                                             </div>
                                         </div>
                                     </div>
