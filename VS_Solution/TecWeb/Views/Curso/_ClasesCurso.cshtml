@@ -5,16 +5,16 @@
     <table class="table table-bordered table-striped ">
         <tr>
             <th style="text-align:center">
-                Descripción
+                Título
             </th>
             <th style="text-align:center">
-                Fecha
+                Descripción
             </th>
             <th style="text-align:center">
                 Tipo
             </th>
             <th style="text-align:center">
-                Título
+                Fecha
             </th>
             <th style="text-align:center">
                 Asistencia
@@ -25,7 +25,13 @@
         {
             <tr>
                 <td style="text-align:center;vertical-align:middle">
+                    @Html.DisplayFor(modelItem => Model.Horario[i].Titulo)
+                </td>
+                <td style="text-align:center;vertical-align:middle">
                     @Html.DisplayFor(modelItem => Model.Horario[i].Descripcion)
+                </td>
+                <td style="text-align:center;vertical-align:middle">
+                    @Html.DisplayFor(modelItem => Model.Horario[i].Tipo)
                 </td>
                 <td style="text-align:center;vertical-align:middle">
                     @Html.DisplayFor(modelItem => Model.Horario[i].Fecha)
@@ -33,13 +39,7 @@
                     {<p style="font-size:12pt;color:lime;font-weight:bold"> Hoy </p> }
                 </td>
                 <td style="text-align:center;vertical-align:middle">
-                    @Html.DisplayFor(modelItem => Model.Horario[i].Tipo)
-                </td>
-                <td style="text-align:center;vertical-align:middle">
-                    @Html.DisplayFor(modelItem => Model.Horario[i].Titulo)
-                </td>
-                <td style="text-align:center;vertical-align:middle">
-                    <a class='btn btn-primary' href='@Url.Action("Index","Registro",new { id = i})'>Registrar</a>
+                    <a class='btn btn-primary' href='@Url.Action("Index", "Registro", new { idClase = i, idCurso = Model.ID})'>Registrar</a>
                 </td>
             </tr>
         }

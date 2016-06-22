@@ -19,9 +19,6 @@ namespace TecWeb.Controllers
         {
             var serv = new ControlAsistencia.ControlAsistenciaClient();
             var Curso = serv.Curso(id);
-            Util.Curso.alumnos = Curso.Alumnos;
-            Util.Curso.ID = id;
-            Util.Curso.Nombre = Curso.Nombre;
             return View(Curso);
         }
 

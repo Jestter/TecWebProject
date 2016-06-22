@@ -1,7 +1,7 @@
-﻿@model TecWeb.ControlAsistencia.Clase
+﻿@model TecWeb.Models.ListaDeAsistencia
 
 <h1>
-    <a class="glyphicon glyphicon-circle-arrow-left back-btn" aria-hidden="true" href=@Url.Action("Detalles/" + @TecWeb.Util.Curso.ID, "Curso")></a>
+    <a class="glyphicon glyphicon-circle-arrow-left back-btn" aria-hidden="true" href=@Url.Action("Detalles", "Curso",new { id = Model.IdCurso})></a>
 </h1>
 <h2>Registro Asistencia</h2>
 <div class="separator"></div>
@@ -13,14 +13,23 @@
         </dt>
 
         <dd>
-            @TecWeb.Util.Curso.Nombre
+            @Model.NombreCurso
         </dd>
+
+        <dt>
+            Clase
+        </dt>
+
+        <dd>
+            @Model.Clase.Titulo
+        </dd>
+
         <dt>
             Fecha
         </dt>
 
         <dd>
-            @Model.Fecha.ToString("dd/MM/yyyy HH:mm")
+            @Model.Clase.Fecha.ToString("dd/MM/yyyy HH:mm")
         </dd>
 
         <dt>

@@ -9,10 +9,16 @@ namespace TecWeb.Controllers
     public class RegistroController : Controller
     {
         // GET: Registro
-        public ActionResult Index(long id)
+        public ActionResult Index(long idClase,long idCurso)
         {
-            var clase = new ControlAsistencia.ControlAsistenciaClient().Curso(Util.Curso.ID).Horario[id];
-            return View(clase);
+            var Curso = new ControlAsistencia.ControlAsistenciaClient().Curso(idCurso);
+            if(!Curso.Profesores.Any(p => p.ID == Util.Sesion.UserID))
+            {
+                return RedirectToAction("Index","Home");
+            }
+            var clase = Curso.Horario[idClase];
+            var lista = new Models.ListaDeAsistencia() { IdCurso = idCurso, Clase = clase, NombreCurso = Curso.Nombre, Participantes = Curso.Alumnos };
+            return View(lista);
         }
     }
 }
