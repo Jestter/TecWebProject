@@ -142,7 +142,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\_ListaProfesores.cshtml" />
+    <Content Include="Views\Home\_ListaUsuarios.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Curso\_ClasesCurso.cshtml" />
     <Content Include="Views\Curso\_ParticipantesCurso.cshtml" />
@@ -159,24 +159,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListaDeAsistencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ControlAsistencia\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Util\Curso.cs" />
     <Compile Include="Util\Sesion.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <None Include="Service References\ControlAsistencia\ControlAsistencia.wsdl" />
-    <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Curso\Index.cshtml" />
     <Content Include="Views\Shared\_ListaCursos.cshtml" />
     <Content Include="Views\Registro\Index.cshtml" />
     <Content Include="Views\Registro\_Alumnos.cshtml" />
+    <Content Include="Views\Home\_login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -186,7 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
