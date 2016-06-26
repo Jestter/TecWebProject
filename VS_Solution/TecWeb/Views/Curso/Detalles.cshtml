@@ -83,16 +83,15 @@
             @Html.Partial("_ParticipantesCurso", Model.Alumnos)
         </dd>
 
-        @if(Model.Profesores.Any(p => p.ID == TecWeb.Util.Sesion.UserID))
-        {
-            <dt>
-                Clases
-            </dt>
+        
+        <dt>
+            Clases
+        </dt>
 
-            <dd>
-                @Html.Partial("_ClasesCurso", Model)
-            </dd>
-        }
+        <dd>
+            @Html.Partial("_ClasesCurso", Model)
+        </dd>
+        
 
     </dl>
 </div>
