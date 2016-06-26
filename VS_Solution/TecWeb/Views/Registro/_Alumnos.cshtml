@@ -11,7 +11,6 @@
                 <th style="text-align:center;vertical-align:middle">
                     Asistencia
                 </th>
-
             </tr>
 
             @foreach (var item in Model.Participantes)
@@ -23,25 +22,23 @@
                     <td style="text-align:center;vertical-align:middle">
                         @if (Model.Clase.Presentes != null && Model.Clase.Presentes.Length > 0 && Model.Clase.Presentes.Any(p => p.ID == item.ID))
                         {
-                            <input type="checkbox" checked onchange="registrar(@item.ID,@Model.IdCurso,@Model.Clase.Fecha.ToString("yyyyMMddHHmm"))">
+                            <input type="checkbox" checked  disabled >
                         }
                         else
                         {
-                            <input type="checkbox" onchange="registrar(@item.ID,@Model.IdCurso,@Model.Clase.Fecha.ToString("yyyyMMddHHmm"))">
+                            <input type="checkbox"  onchange="registrar(@item.ID,@Model.IdCurso,@Model.Clase.Fecha.ToString("yyyyMMddHHmm"),this)">
                         }
 
                     </td>
                 </tr>
             }
-
-
         </table>
     </div>
 </div>
 
-<script>
-
-    registrar=function(idPar,idCur,fecha){
+<script type="text/javascript">
+    registrar = function (idPar, idCur, fecha, checkbox) {     
+        checkbox.disabled = true;
         $.ajax({
             data: JSON.stringify({
                 "IdPar" : idPar,
@@ -50,11 +47,7 @@
             }),
             url:   '/api/RegistroAPI',
             type: 'POST',
-            contentType:"application/json"                      
-           
+            contentType:"application/json"  
         });   
     }
-
-
-
 </script>
