@@ -5,6 +5,7 @@ using System.Web;
 
 namespace TecWeb.Util
 {
+    //Clase de utilidad para emular una sesion de usuario
     public class Sesion
     {
         static private long userID = -1;

@@ -28,7 +28,6 @@ namespace TecWeb.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-            //var Cursos = new ControlAsistencia.ControlAsistenciaClient().CursosPorProfesor(Util.Sesion.UserID);
 
             var Cursos = new ControlAsistencia.ControlAsistenciaClient().Cursos();
             

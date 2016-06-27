@@ -30,7 +30,6 @@ namespace TecWeb.Controllers
                         Alumnos.Add(alum);
                     }
             Alumnos.Sort((p1, p2) => p1.Nombre.CompareTo(p2.Nombre));
-            //Util.Sesion.Logout();
             Usuarios.AddRange(Alumnos);
             return View(Usuarios);
         }

@@ -5,6 +5,7 @@ using System.Web;
 
 namespace TecWeb.Models
 {
+    //Clase para el modelo del registro de asistencia
     public class ListaDeAsistencia
     {
         public ControlAsistencia.Clase Clase { get; set; }
